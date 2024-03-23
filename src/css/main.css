@@ -1,0 +1,233 @@
+:root {
+  --color-darkBlue: hsl(240, 38%, 20%);
+  --color-grayishBlue: hsl(240, 18%, 77%);
+  --color-textDarkGray: hsl(252, 4%, 75%);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.testimonial-area {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-auto-flow: column;
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.flex-area {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: url(../images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-position: bottom -13px left -20px;
+  background-size: 100% 88px;
+}
+
+ @media (min-width: 1024px) {
+ /* body {
+  background: url(../images/pattern-curve.svg);
+    background-repeat: no-repeat;
+    background-position: bottom 0px left 0px;
+    background-size: 40% 158px;
+  }*/
+  .flex-area {
+    flex-direction: row-reverse;
+  }
+} 
+
+/* slider area */
+.slider-area {
+  flex: 1;
+  padding-top: 52px;
+  padding-bottom: 25px;
+  background: url(../images/pattern-bg.svg);
+  background-position: top 12px center;
+  background-repeat: no-repeat;
+  background-size: 86% 94%;
+  position: relative;
+}
+
+.profile-picture {
+  width: 69%;
+  height: 256px;
+  max-width: 295px;
+  margin: 0 auto;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.btn-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -21px;
+  background: #ffff;
+  width: 80px;
+  height: 42px;
+  border-radius: 25px;
+  z-index: 100;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 2px;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.btn {
+  border: none;
+  background: none;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(241 245 249);
+}
+
+.btn img {
+  width: 10px;
+  height: 12px;
+}
+
+@media (min-width: 678px) {
+  .slider-area {
+    background-position: center center;
+    background-size: contain;
+  }
+}
+
+@media (min-width: 1024px) {
+  .slider-area {
+    height: 100%;
+    padding-top: unset;
+    background-position: top 50px right 80px;
+    background-size: contain;
+  }
+
+  .profile-picture {
+    position: absolute;
+    top: 110px;
+    left: -15px;
+    width: fit-content;
+    height: fit-content;
+    max-width: unset;
+    overflow: unset;
+    margin: unset;
+  }
+
+  .profile-picture img {
+    width: auto;
+    height: auto;
+  }
+
+  .btn-container {
+    left: 12%;
+    bottom: -28px ;
+    transform: unset;
+    width: 110px;
+    height: 52px;
+  }
+}
+
+/* testimonial area */
+
+.text-area {
+  flex: 1;
+  padding: 44px 30px 0 30px;
+  /* padding-top: 61px; */
+  background: #ffff;
+  background: url(../images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  background-position: top 15px center;
+  background-size: 60px;
+  letter-spacing: 0.3px;
+}
+
+.paragraph {
+  font-size: 17.5px;
+  text-align: center;
+  line-height: 24px;
+  color: var(--color-darkBlue);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.student {
+  padding-top: 18px;
+  text-align: center;
+  color: var(--color-grayishBlue);
+}
+
+.name {
+  color: var(--color-darkBlue);
+  display: block;
+  font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+  .text-area {
+    padding-top: unset;
+    position: relative;
+    background-position: top 30% left 41%;
+    background-size: unset;
+  }
+
+  .paragraph {
+    position: absolute;
+    top: 34.7%;
+    right: -82px;
+    line-height: 43.8px;
+    font-weight: 300;
+    font-size: 32px;
+    text-align: left;
+    padding: 0 30px;
+    max-width: 700px;
+    letter-spacing: .1px;
+    margin: unset;
+  }
+
+  .student {
+    position: absolute;
+    bottom: 30%;
+    left: 22%;
+    font-size: 20px;
+  }
+
+  .name {
+    display: inline;
+    font-weight: bold;
+  }
+}
+
+
+
+
