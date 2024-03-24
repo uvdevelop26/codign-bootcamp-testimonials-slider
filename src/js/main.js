@@ -4,7 +4,7 @@ const btnNext = testimonialArea.querySelectorAll('.next');
 const btnPrev = testimonialArea.querySelectorAll('.prev');
 
 
-
+/* btn listener */
 btnNext.forEach((item, i) => {
     item.addEventListener('click', () => {
         const list = sliders[i].clientWidth;
@@ -19,6 +19,7 @@ btnPrev.forEach((item, i) => {
     });
 });
 
+/* key listener */
 
 document.addEventListener('keydown', (event) => {
     if (event.keyCode === 39) {
